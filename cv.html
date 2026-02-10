@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekta Pandey - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.5;
+            color: #2c3e50;
+            padding: 20px;
+            background: #f0f2f5;
+            min-height: 100vh;
+        }
+        
+        .button-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .download-btn {
+            background: #34495e;
+            color: white;
+            padding: 14px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: #2c3e50;
+        }
+        
+        .ats-score {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 15px 20px;
+            background: #e8f5e9;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #2e7d32;
+            font-size: 18px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        
+        #resumeContent {
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #34495e;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .contact-info {
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+        
+        .contact-info a {
+            color: #34495e;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            background: #34495e;
+            padding: 8px 12px;
+            margin-bottom: 12px;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+        
+        .objective {
+            font-size: 12px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        
+        .education-item, .experience-item, .project-item {
+            margin-bottom: 12px;
+            font-size: 12px;
+        }
+        
+        .degree-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+        
+        .college-name {
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .date {
+            color: #34495e;
+            font-style: italic;
+            font-size: 11px;
+            margin-top: 2px;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+        
+        .company-name {
+            font-weight: 500;
+            color: #34495e;
+        }
+        
+        .description {
+            margin-top: 6px;
+            margin-left: 12px;
+            font-size: 11px;
+            line-height: 1.5;
+            color: #555;
+        }
+        
+        .description br {
+            margin-bottom: 4px;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            font-size: 11px;
+        }
+        
+        .skill-item {
+            background: #ecf0f1;
+            color: #2c3e50;
+            padding: 6px 10px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 500;
+            border-left: 3px solid #34495e;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+        
+        .project-desc {
+            margin-top: 4px;
+            margin-left: 12px;
+            font-size: 11px;
+            line-height: 1.5;
+            color: #555;
+        }
+        
+        .project-desc br {
+            margin-bottom: 3px;
+        }
+        
+        .cert-item {
+            font-size: 11px;
+            margin-bottom: 5px;
+            margin-left: 12px;
+            color: #555;
+        }
+        
+        .cert-item:before {
+            content: "✓ ";
+            color: #34495e;
+            font-weight: bold;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+            .button-container {
+                display: none;
+            }
+            .ats-score {
+                display: none;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                margin: 0;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="download-btn" onclick="printToPDF()">📥 Download PDF (Right Click)</button>
+    </div>
+    
+    <div class="container">
+        <div id="resumeContent">
+            <div class="header">
+                <h1>EKTA PANDEY</h1>
+                <div class="contact-info">
+                    <a href="mailto:Pandeyekta331@gmail.com">📧 Pandeyekta331@gmail.com</a>
+                    <span>|</span>
+                    <a href="tel:8896331300">📱 8896331300</a>
+                    <span>|</span>
+                    <span>📍 Kanpur, Uttar Pradesh</span>
+                    <span>|</span>
+                    <a href="https://www.linkedin.com/in/ekta-pandey-051b79241" target="_blank">🔗 LinkedIn</a>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">PROFESSIONAL SUMMARY</div>
+                <div class="objective">
+                    Entry-level Web Developer with hands-on experience in frontend development and Python automation. Skilled in building responsive websites, basic backend development, and web scraping. Seeking to contribute to real-world projects and grow as a full-stack developer.
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">EDUCATION</div>
+                <div class="education-item">
+                    <div class="degree-title">B.Tech in Computer Science Engineering</div>
+                    <div class="college-name">Indus Institute of Management Technology</div>
+                    <div class="date">2025</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree-title">Diploma</div>
+                    <div class="college-name">Government Polytechnic, Kanpur</div>
+                    <div class="date">2020</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">WORK EXPERIENCE</div>
+                <div class="experience-item">
+                    <div class="job-title">Web Developer</div>
+                    <div class="company-name">SOFZER Technologies</div>
+                    <div class="date">Aug 2024 - Present</div>
+                </div>
+                <div class="experience-item">
+                    <div class="job-title">Full-Stack Developer Intern</div>
+                    <div class="company-name">Techpile Technology Pvt. Ltd.</div>
+                    <div class="date">8 Months</div>
+                    <div class="description">
+                        • Developed responsive web pages using HTML, CSS, Bootstrap<br>
+                        • Fixed UI bugs and improved layout consistency<br>
+                        • Implemented JavaScript features for form validation and dynamic content<br>
+                        • Built Python web scraping scripts using BeautifulSoup, Requests, Selenium<br>
+                        • Automated data collection and analysis<br>
+                        • Assisted in ASP.NET Core MVC backend development with SQL<br>
+                        • Contributed to Student Management System and portfolio projects
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">TECHNICAL SKILLS</div>
+                <div class="skills-container">
+                    <div class="skill-item">HTML</div>
+                    <div class="skill-item">CSS</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">Bootstrap</div>
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">ASP.NET Core</div>
+                    <div class="skill-item">SQL/MySQL</div>
+                    <div class="skill-item">Git/GitHub</div>
+                    <div class="skill-item">Web Scraping</div>
+                    <div class="skill-item">BeautifulSoup</div>
+                    <div class="skill-item">Selenium</div>
+                    <div class="skill-item">Responsive Design</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">PROJECTS</div>
+                <div class="project-item">
+                    <div class="project-title">Student Management System (ASP.NET Core MVC)</div>
+                    <div class="project-desc">
+                        • Developed web application with CRUD operations for student records<br>
+                        • Integrated SQL database for backend data storage
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">E-commerce Product Listing Page</div>
+                    <div class="project-desc">
+                        • Built responsive product listing page with filters<br>
+                        • Added JavaScript interactivity for enhanced user experience
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">Personal Portfolio Website</div>
+                    <div class="project-desc">
+                        • Designed and developed responsive portfolio showcasing skills and projects
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">CERTIFICATIONS</div>
+                <div class="cert-item">Full-Stack Developer Internship Certificate – Techpile Technology Pvt. Ltd.</div>
+                <div class="cert-item">Web Development Training Certificate</div>
+                <div class="cert-item">Python Basics Certification</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function printToPDF() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
